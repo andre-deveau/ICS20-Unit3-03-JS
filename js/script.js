@@ -23,7 +23,7 @@ function enterClicked() {
   const radius = parseInt(document.getElementById("radius").value)
 
   //process
-  const volumesphere = (4.0 * Math.PI * radius ** 3) /3.0
+  const volumesphere = (4.0 * Math.PI * radius ** 3) / 3.0
 
   //output
   document.getElementById("volume-of-sphere").innerHTML =
