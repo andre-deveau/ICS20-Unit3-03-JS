@@ -10,14 +10,22 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Template/sw.js", {
-    scope: "/ICS2O-PWA-Template/",
+  navigator.serviceWorker.register("/ICS20-Unit3-03-JS/sw.js", {
+    scope: "/ICS20-Unit3-03-JS/",
   })
 }
 
 /**
  * This function displays an alert.
  */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+function enterClicked() {
+  //input
+  const radius = parseInt(document.getElementById("radius").value)
+
+  //process
+  const volumesphere = (4.0 * Math.PI * radius ** 3) /3.0
+
+  //output
+  document.getElementById("volume-of-sphere").innerHTML =
+    "The volume of the sphere is: " + volumesphere.toFixed(2) + "cm³"
 }
